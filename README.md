@@ -20,7 +20,7 @@ To run the code do the following:
     - The code will be compiled and translated in js in newly created folder called `dist` and then it will console all the SKUs with thier quantity in console.
 - To run the unit tests you need to run command `npm test`
     - The unit tests will get execute
-- The function is present in `src/services/stock` file.
+- The required function is present in `src/services/stock` file with name of `calculateStockQuantity(sku: string): Promise<stockLevel>`.
 
 ## Assumptions
 
