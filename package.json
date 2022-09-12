@@ -1,0 +1,44 @@
+{
+  "name": "backend-hiring-test",
+  "version": "0.1.0",
+  "description": "Hiring test given by softoo",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Hassan Ali",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build-ts && npm run lint",
+    "build-ts": "tsc",
+    "debug": "npm run build && npm run watch-debug",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "serve": "npm run build && node dist/entry-point.js",
+    "serve-debug": "nodemon --inspect dist/entry-point.js",
+    "start": "npm run serve",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\"",
+    "watch-node": "nodemon dist/entry-point.js",
+    "watch-ts": "tsc -w",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.1",
+    "@types/lodash": "^4.14.185",
+    "@types/node": "^18.7.17",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.23.1",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.19",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
