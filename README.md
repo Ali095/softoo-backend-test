@@ -16,7 +16,7 @@ Notes:
 
 To run the code do the following:
 - Clone the repository and run `npm i` in terminal.
-- Run `npm start` to start to run the `entry-point.ts` script
+- Run `npm start` to start and run the `entry-point.ts` script
     - The code will be compiled and translated in js in newly created folder called `dist` and then it will console all the SKUs with thier quantity in console.
 - To run the unit tests you need to run command `npm test`
     - The unit tests will get execute
